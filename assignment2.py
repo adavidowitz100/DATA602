@@ -11,10 +11,10 @@ days = ["Sunday", "Monday","Tuesday", "Wednesday", "Thursday","Friday", "Saturda
 sales = []
 total_sales = 0
 for day in days:
-  amount = float(input("Enter the sales for " + day))
+  amount = float(input("Enter the sales for " + day + ": "))
   sales.append(amount)
   total_sales += amount
-print("The total sales for the week was ",total_sales)
+print("The total sales for the week was",total_sales)
 
 #Q3:
 lst_places = ['Berlin', 'Nairobi', 'Tokyo', 'Stockholm', 'Moscow']
@@ -42,9 +42,16 @@ input_1 = input("Please enter a course number: ")
 print(my_dict[input_1])
 
 #Q5
-email_dic = dict({"Name" : "Larry", "Email":"larry@gmail.com"}) # Create Dictionary
-
-email_dic.append["Name"].append("Mike")
-email_dic.append["Email"].append("mike@gmail.com")
-
-email_dic.update({"Name" : "Larry", "Email" : "larry@yahoo.com"}) # Update Dictionary
+email_dic = {"Larry": "larry@gmail.com", "Barry": "barry@gmail.com"} # Create Dictionary
+print(email_dic)
+#lookup email
+print(email_dic["Barry"])
+#add a new name/email
+email_dic["Mike"] = "mike@gmail.com"
+print(email_dic)
+# update existing email
+email_dic["Larry"] = "larry@yahoo.com"
+print(email_dic)
+# delete an existing name and email address
+del email_dic["Mike"]
+print(email_dic)
